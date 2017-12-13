@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/midNightBlue">
+
+    <RelativeLayout
+        android:id="@+id/NavigationButton"
+        android:layout_width="48sp"
+        android:layout_height="48sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:background="@drawable/ic_location_on_black_24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Expandbutton"
+        android:layout_width="48sp"
+        android:layout_height="48sp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/NavigationButton"
+        android:gravity="center">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_keyboard_arrow_down_black_24dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/cvInsName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/Expandbutton"
+        android:padding="8dp"
+        android:text="Item with Parent"
+        android:textColor="@color/cloud" />
+
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/ParentChild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvInsName"
+        android:background="@color/colorPrimaryYelloW"
+        android:orientation="vertical"
+        app:ael_duration="2500"
+        app:ael_expanded="false"
+        app:ael_interpolator="bounce">
+
+        <TextView
+            android:id="@+id/cvInsDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/Expandbutton"
+            android:background="@color/colorPrimaryYelloW"
+            android:padding="10sp"
+            android:text="Item with Child"
+            android:textColor="@color/cloud"
+            android:textSize="12sp" />
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+</RelativeLayout>

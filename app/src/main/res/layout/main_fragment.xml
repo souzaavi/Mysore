@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/church" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryYelloW">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="250sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bhishop" />
+
+            <RelativeLayout
+                android:id="@+id/dailyQuote"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_marginLeft="-00sp"
+                android:layout_marginRight="00sp"
+                android:layout_marginTop="150sp"
+                android:background="@drawable/primary_gradient">
+
+                <!--<ImageView
+                    android:id="@+id/bibleLogo"
+                    android:layout_width="70sp"
+                    android:layout_height="70sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/aob" />-->
+
+                <LinearLayout
+                    android:id="@+id/wordOfGod"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7sp">
+
+                        <com.geliddroid.mysore.CustomWidget.CustomTextView
+                            android:id="@+id/read"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="5sp"
+                            android:layout_marginRight="10sp"
+                            android:text="Continue Reading >>"
+                            android:textColor="@color/cloud" />
+
+                        <TextView
+                            android:id="@+id/ReflectioOftheDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/read"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="20sp"
+                            android:layout_weight="1"
+                            android:gravity="fill"
+                            android:maxLines="3"
+                            android:padding="2sp"
+                            android:text="Reflection Of the day"
+                            android:textColor="@color/cloud"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3sp"
+                android:layout_above="@+id/menuAndNews"
+                android:background="@color/colorPrimary"
+                android:elevation="5sp" />
+
+            <LinearLayout
+                android:id="@+id/menuAndNews"
+                android:layout_width="match_parent"
+                android:layout_height="150sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/banner"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.80">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/Aboutus"
+                            android:layout_width="match_parent"
+                            android:layout_height="0sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="About Us"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="19sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2sp"
+                            android:layout_marginLeft="15sp"
+                            android:layout_marginRight="15sp"
+                            android:background="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/circular"
+                            android:layout_width="match_parent"
+                            android:layout_height="0sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Circular"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="19sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.20">
+
+
+                    <AdapterViewFlipper
+                        android:id="@+id/newsFliper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true">
+
+                    </AdapterViewFlipper>
+
+                    <com.geliddroid.mysore.CustomWidget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryTr"
+                        android:padding="5sp"
+                        android:text="News"
+                        android:textColor="@color/cloud" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/menumenu"
+                android:layout_width="match_parent"
+                android:layout_height="150sp"
+                android:layout_below="@+id/menuAndNews"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/back1" />
+
+                <LinearLayout
+                    android:id="@+id/menuChu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <RelativeLayout
+                        android:id="@+id/churchesplace"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.75">
+
+                        <TextView
+                            android:id="@+id/churches"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="7sp"
+                            android:gravity="center"
+                            android:text="Churches"
+                            android:textColor="@color/colorPrimaryYelloWT"
+                            android:textSize="19sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.25"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/institution"
+                            android:layout_width="match_parent"
+                            android:layout_height="0sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Institutions"
+                            android:textColor="@color/colorPrimaryYelloWT"
+                            android:textSize="19sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2sp"
+                            android:background="@color/colorPrimaryYelloWT" />
+
+                        <TextView
+                            android:id="@+id/organization"
+                            android:layout_width="match_parent"
+                            android:layout_height="0sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Service Organizations"
+                            android:textColor="@color/colorPrimaryYelloWT"
+                            android:textSize="19sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

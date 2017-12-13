@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/midNightBlue">
+
+    <RelativeLayout
+        android:id="@+id/Expandbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <View
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_keyboard_arrow_down_black_24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Navbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/Expandbutton"
+        android:gravity="center">
+
+        <View
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_location_on_black_24dp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/ChildParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/Navbutton"
+        android:padding="16dp"
+        android:text="Item with Parent"
+        android:textColor="@color/cloud" />
+
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/ParentChild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ChildParent"
+        android:background="@color/colorPrimaryYelloWT"
+        android:orientation="vertical"
+        android:padding="8sp"
+        app:ael_duration="1000"
+        app:ael_expanded="false"
+        app:ael_interpolator="linear">
+
+        <com.geliddroid.mysore.CustomWidget.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:text="Address:"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/Child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/Expandbutton"
+            android:paddingBottom="8sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:text="Item with Child"
+            android:textColor="@color/cloud"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/colorPrimary" />
+
+        <com.geliddroid.mysore.CustomWidget.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:paddingTop="5sp"
+            android:text="Daily Mass Timings"
+            android:textColor="@color/colorPrimary" />
+
+        <com.geliddroid.mysore.CustomWidget.CustomTextViews
+            android:id="@+id/dailyMass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:textColor="@color/cloud"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/colorPrimary" />
+
+        <com.geliddroid.mysore.CustomWidget.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:paddingTop="5sp"
+            android:text="Sunday Mass Timings"
+            android:textColor="@color/colorPrimary" />
+
+        <com.geliddroid.mysore.CustomWidget.CustomTextViews
+            android:id="@+id/sunmass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:textColor="@color/cloud"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/colorPrimary" />
+
+        <com.geliddroid.mysore.CustomWidget.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:paddingTop="5sp"
+            android:text="Adoration"
+            android:textColor="@color/colorPrimary" />
+
+        <com.geliddroid.mysore.CustomWidget.CustomTextViews
+            android:id="@+id/adoration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:textColor="@color/cloud"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/colorPrimary" />
+
+        <com.geliddroid.mysore.CustomWidget.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:paddingTop="5sp"
+            android:text="Contact"
+            android:textColor="@color/colorPrimary" />
+
+        <com.geliddroid.mysore.CustomWidget.CustomTextViews
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:textColor="@color/cloud"
+            android:textSize="12sp" />
+
+        <com.geliddroid.mysore.CustomWidget.CustomButton
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="16sp"
+            android:text="Share"
+            android:textColor="@color/cloud" />
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+</RelativeLayout>

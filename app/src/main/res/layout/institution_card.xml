@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5sp"
+    android:paddingRight="5sp">
+
+    <Button
+        android:id="@+id/insName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:background="@color/colorPrimaryYelloW"
+        android:elevation="5sp"
+        android:gravity="center_vertical|fill"
+        android:padding="10sp"
+        android:textColor="@color/cloud"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+</RelativeLayout>
